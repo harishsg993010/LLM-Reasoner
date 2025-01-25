@@ -1,0 +1,52 @@
+[project]
+name = "llm-reasoner"
+version = "0.1.9"
+description = "Transform any LLM into a methodical thinker that excels at systematic reasoning like OpenAI o1 and DeepSeek R1"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {file = "LICENSE"}
+authors = [
+    {name = "Harish Santhanalakshmi Ganesan", email = "harishsg99@gmail.com"}
+]
+dependencies = [
+    "litellm>=1.0.0",
+    "click>=8.0.0",
+    "rich>=12.0.0",
+    "streamlit>=1.0.0",
+    "pydantic>=2.0.0",
+    "pytest>=8.3.4",
+    "pytest-asyncio>=0.24.0",
+    "build>=1.2.2.post1",
+    "twine>=6.1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "pytest-asyncio>=0.24.0",
+    "black>=22.0",
+    "mypy>=0.900",
+    "build>=1.0.0",
+    "twine>=4.0.0",
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project.scripts]
+llm-reasoner = "llm_reasoner.commands:cli"
+
+[tool.setuptools.packages.find]
+include = ["llm_reasoner*"]
+exclude = ["tests*"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "strict"
+addopts = "-v"
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]
+markers = [
+    "asyncio: mark a test as an asyncio test",
+]

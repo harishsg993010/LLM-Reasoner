@@ -1,0 +1,17 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Python files
+*.py text diff=python
+
+# Documentation
+*.md text diff=markdown
+LICENSE text
+
+# Config files
+*.toml text
+*.yml text
+*.yaml text
+
+# Declare files that will always have LF line endings on checkout
+*.sh text eol=lf
