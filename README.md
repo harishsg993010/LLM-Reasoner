@@ -2,6 +2,9 @@
 
 Make any LLM to think deeper like OpenAI o1 and deepseek R1!
 
+![LLM Reasoner Overview](https://i.postimg.cc/bJjJRwP2/LLM-reasoner.png)
+![LLM Reasoner Flow](https://i.postimg.cc/Y9fSDB2D/LLM-reasoner2.png)
+
 ## ✨ What's Cool About It?
 
 - 🧠 **Step-by-Step Reasoning**: No more black-box answers! See exactly how your LLM thinks, similar to O1's methodical approach
