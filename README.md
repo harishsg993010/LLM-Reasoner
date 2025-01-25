@@ -1,7 +1,13 @@
 # 🤔 LLM-Reasoner: Make any LLM to think deeper like OpenAI o1 and deepseek R1!
 
 Make any LLM to think deeper like OpenAI o1 and deepseek R1!
-![LLM Reasoner Flow](https://i.postimg.cc/Y9fSDB2D/LLM-reasoner2.png)
+
+<p align="center">
+  <img src="https://i.postimg.cc/Y9fSDB2D/LLM-reasoner2.png" 
+       alt="LLM Reasoner Flow" 
+       style="max-width:100%;"
+       width="800" />
+</p>
 
 ## ✨ What's Cool About It?
 
