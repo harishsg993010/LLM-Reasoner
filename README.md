@@ -1,4 +1,4 @@
-# 🤔 LLM-Reasoner: Transform any LLM into a methodical thinker!
+# 🤔 LLM-Reasoner: Make any LLM think deeper like OpenAI o1 and deepseek R1!
 
 Make any LLM think deeper like OpenAI o1 and deepseek R1!
 
