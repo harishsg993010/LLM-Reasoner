@@ -2,7 +2,7 @@
 
 Make any LLM to think deeper like OpenAI o1 and deepseek R1!
 ![LLM Reasoner 2](https://github.com/harishsg993010/LLM-Reasoner/blob/main/LLM%20reasoner2.png?raw=true)
-![LLM Reasoner 3](https://github.com/harishsg993010/LLM-Reasoner/blob/main/LLM%20reasoner3.png?raw=true)
+
 
 ## ✨ What's Cool About It?
 
@@ -40,6 +40,10 @@ llm-reasoner reason "How do planes fly?" --min-steps 5
 # Launch the UI
 llm-reasoner ui
 ```
+### Interactive UI
+
+![LLM Reasoner 3](https://github.com/harishsg993010/LLM-Reasoner/blob/main/LLM%20reasoner3.png?raw=true)
+
 
 ### Let's see it in action as SDK 
 
@@ -106,12 +110,7 @@ llm-reasoner set-model my-custom-model
 llm-reasoner reason "What is quantum computing?" --model my-custom-model
 ```
 
-### 4. Interactive UI Features
-- Drag-n-drop model selection
-- Real-time confidence visualization
-- Step-by-step animations
-- Custom parameter tuning
-- Query history tracking
+
 
 ## 🎛️ Power User Settings
 
