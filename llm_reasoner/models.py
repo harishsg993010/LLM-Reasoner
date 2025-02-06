@@ -15,6 +15,7 @@ except ImportError:
 
 from pydantic import BaseModel, ConfigDict, field_validator, Field
 
+
 class ModelConfig(BaseModel):
     """Configuration for a specific model."""
     name: str = Field(..., description="Name of the model")
@@ -60,6 +61,7 @@ class ModelConfig(BaseModel):
             raise ValueError("Context window must be a positive integer")
         return v
 
+
 class ModelRegistry:
     """Registry managing available models and their configurations."""
 
@@ -90,7 +92,13 @@ class ModelRegistry:
                 provider='google',
                 context_window=32768,
             ),
+            'ollama/llama3.2': ModelConfig(
+                name='ollama/llama3.2',
+                provider='ollama',
+                context_window=4096,
+            ),
         }
+
         return models
 
     def _set_initial_default(self) -> None:
@@ -102,6 +110,8 @@ class ModelRegistry:
                 default_model = 'claude-2'
             elif os.getenv('GOOGLE_API_KEY'):
                 default_model = 'gemini-pro'
+            elif os.getenv('OLLAMA_API_BASE'):  # Check for Ollama
+                default_model = 'ollama/llama3.2'
             else:
                 default_model = 'gpt-3.5-turbo'
 
@@ -110,7 +120,11 @@ class ModelRegistry:
                 model_dict['default'] = True
                 self._models[default_model] = ModelConfig(**model_dict)
 
-    def register_model(self, name: str, provider: str, context_window: Optional[int] = None) -> None:
+    def register_model(
+            self,
+            name: str,
+            provider: str,
+            context_window: Optional[int] = None) -> None:
         """Register a new model with the registry.
 
         Args:
@@ -154,6 +168,7 @@ class ModelRegistry:
     def list_models(self) -> Dict[str, ModelConfig]:
         """List all available models."""
         return self._models
+
 
 # Initialize the global model registry
 model_registry = ModelRegistry()
